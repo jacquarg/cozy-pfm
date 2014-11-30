@@ -2,10 +2,17 @@ BaseView = require '../lib/base_view'
 
 module.exports = class BankSubTitleView extends BaseView
 
-    template: require('./templates/balance_bank_subtitle')
 
-    constructor: (@model) ->
+    constructor: (account, isCetelem) ->
+        if isCetelem
+            @template = require('./templates/balance_bank_subtitle_cetelem')
+        else
+            @template = require('./templates/balance_bank_subtitle')
+        @model = account
         super()
+
+    # constructor: (@model) ->
+    #     super()
 
     events:
         "click .row" : "chooseAccount"

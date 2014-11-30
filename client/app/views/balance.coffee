@@ -1,6 +1,7 @@
 BaseView = require '../lib/base_view'
 
 BalanceBankView = require './balance_bank'
+BalanceCetelemView = require './balance_cetelem'
 BalanceOperationsView = require "./balance_operations"
 
 module.exports = class BalanceView extends BaseView
@@ -53,6 +54,13 @@ module.exports = class BalanceView extends BaseView
                     callback null, col.length
                     viewBank.$el.html ""
 
+        # hack BJA BNP/CETELEM 29/11/2014
+        viewBank = new BalanceCetelemView 'toto'
+        viewBank.render()
+        view.subViews.push viewBank
+        # load loading placeholder
+        $(view.elAccounts).append viewBank.el
+
         # render all banks
         async.concat window.collections.banks.models, treatment, (err, results) ->
 
@@ -68,6 +76,7 @@ module.exports = class BalanceView extends BaseView
             # no accounts
             if @accounts == 0
                 $(view.elAccounts).prepend require "./templates/balance_banks_empty"
+
 
         @
 
