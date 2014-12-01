@@ -8742,8 +8742,9 @@ input.reports-limit {
 }
 .row.accounts-top {
   font-size: 18px;
+  font-weight: bold;
   margin: 0;
-  padding: 10px 0 5px 0;
+  padding: 15px 0 0px 0;
 }
 .row.accounts-sub:hover {
   background-color: rgba(49,156,255,0.5);
@@ -8771,8 +8772,8 @@ input.reports-limit {
 }
 .row.accounts-sub {
   font-size: 14px;
-  margin: 0 5px;
-  padding: 5px 0 5px 15px;
+  margin: 0 11px;
+  padding: 0px 0 3px 15px;
 }
 table#table-operations {
   margin-top: 20px;

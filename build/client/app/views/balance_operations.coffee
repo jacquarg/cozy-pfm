@@ -111,19 +111,28 @@ module.exports = class BalanceOperationsView extends BaseView
         view = @
         @model = account
 
-        # render the header - title etc
-        @$el.html @templateHeader
-            model: account
+        cetelemType = account.get('cetelemType')
 
-        # get the operations for this account
-        window.collections.operations.reset()
-        window.collections.operations.setAccount account
-        window.collections.operations.fetch
-            success: (operations) ->
-                view.addAll()
+        if cetelemType == "credits"
+            @$el.html "<img src='images/compte-cetelem.png'></img>"
 
-            error: ->
-                console.log "error fetching operations"
+        else if cetelemType == "pwd"
+            @$el.html "<img src='images/LastPass.png'></img>"
+
+        else
+            # render the header - title etc
+            @$el.html @templateHeader
+                model: account
+
+            # get the operations for this account
+            window.collections.operations.reset()
+            window.collections.operations.setAccount account
+            window.collections.operations.fetch
+                success: (operations) ->
+                    view.addAll()
+
+                error: ->
+                    console.log "error fetching operations"
         @
 
     addAll: ->
