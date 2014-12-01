@@ -32,8 +32,10 @@ module.exports = class BalanceCetelemView extends BaseView
         # add accounts
         # for account in @bank.accounts.models
         #     @addOne account
-        @addOne new Backbone.Model(title: 'Gestion Crédits', cetelemType: "credits")
-        @addOne new Backbone.Model(title: 'Gestion mots de passe', cetelemType: "pwd")
+        @addOne new Backbone.Model(title: 'Crédits en cours', cetelemType: "credits")
+        @addOne new Backbone.Model(title: 'Epargne et placements', cetelemType: "credits")
+        @addOne new Backbone.Model(title: 'Prévoyance et assurance', cetelemType: "credits")
+        @addOne new Backbone.Model(title: 'Coffre à mots de passe', cetelemType: "pwd")
 
         @
 

@@ -1722,11 +1722,19 @@ module.exports = BalanceCetelemView = (function(_super) {
     this.viewTitle = null;
     this.sum = 0;
     this.addOne(new Backbone.Model({
-      title: 'Gestion Crédits',
+      title: 'Crédits en cours',
       cetelemType: "credits"
     }));
     this.addOne(new Backbone.Model({
-      title: 'Gestion mots de passe',
+      title: 'Epargne et placements',
+      cetelemType: "credits"
+    }));
+    this.addOne(new Backbone.Model({
+      title: 'Prévoyance et assurance',
+      cetelemType: "credits"
+    }));
+    this.addOne(new Backbone.Model({
+      title: 'Coffre à mots de passe',
       cetelemType: "pwd"
     }));
     return this;
