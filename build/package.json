@@ -6,7 +6,7 @@
   ],
   "description": "Personal Finance Manager you own and control",
   "icon-path": "client/app/assets/icons/main_icon_2.svg",
-  "cozy-color": "",
+  "cozy-color": "#b5f57c",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "scripts": {
     "test": "cake --use-js tests",
-    "start": "node build/server.js"
+    "start": "coffee server.coffee"
   },
   "cozy-displayName": "Banks",
   "cozy-permissions": {
