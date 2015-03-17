@@ -155,13 +155,13 @@ module.exports = {
 
 require.register("collections/bank_accesses", function(exports, require, module) {
 var BankAccess, BankAccesses,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankAccess = require('../models/bank_access');
 
-module.exports = BankAccesses = (function(_super) {
-  __extends(BankAccesses, _super);
+module.exports = BankAccesses = (function(superClass) {
+  extend(BankAccesses, superClass);
 
   function BankAccesses() {
     return BankAccesses.__super__.constructor.apply(this, arguments);
@@ -179,13 +179,13 @@ module.exports = BankAccesses = (function(_super) {
 
 require.register("collections/bank_accounts", function(exports, require, module) {
 var BankAccount, BankAccounts,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankAccount = require('../models/bank_account');
 
-module.exports = BankAccounts = (function(_super) {
-  __extends(BankAccounts, _super);
+module.exports = BankAccounts = (function(superClass) {
+  extend(BankAccounts, superClass);
 
   BankAccounts.prototype.model = BankAccount;
 
@@ -198,11 +198,11 @@ module.exports = BankAccounts = (function(_super) {
   }
 
   BankAccounts.prototype.getSum = function() {
-    var account, sum, _i, _len, _ref;
+    var account, i, len, ref, sum;
     sum = 0;
-    _ref = this.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      account = _ref[_i];
+    ref = this.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      account = ref[i];
       sum += Number(account.get("amount"));
     }
     return sum;
@@ -216,13 +216,13 @@ module.exports = BankAccounts = (function(_super) {
 
 require.register("collections/bank_alerts", function(exports, require, module) {
 var BankAlert, BankAlerts,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankAlert = require('../models/bank_alert');
 
-module.exports = BankAlerts = (function(_super) {
-  __extends(BankAlerts, _super);
+module.exports = BankAlerts = (function(superClass) {
+  extend(BankAlerts, superClass);
 
   function BankAlerts() {
     return BankAlerts.__super__.constructor.apply(this, arguments);
@@ -240,13 +240,13 @@ module.exports = BankAlerts = (function(_super) {
 
 require.register("collections/bank_operations", function(exports, require, module) {
 var BankOperation, BankOperations,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankOperation = require('../models/bank_operation');
 
-module.exports = BankOperations = (function(_super) {
-  __extends(BankOperations, _super);
+module.exports = BankOperations = (function(superClass) {
+  extend(BankOperations, superClass);
 
   function BankOperations() {
     return BankOperations.__super__.constructor.apply(this, arguments);
@@ -324,13 +324,13 @@ module.exports = BankOperations = (function(_super) {
 
 require.register("collections/banks", function(exports, require, module) {
 var Bank, Banks,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 Bank = require('../models/bank');
 
-module.exports = Banks = (function(_super) {
-  __extends(Banks, _super);
+module.exports = Banks = (function(superClass) {
+  extend(Banks, superClass);
 
   function Banks() {
     return Banks.__super__.constructor.apply(this, arguments);
@@ -341,11 +341,11 @@ module.exports = Banks = (function(_super) {
   Banks.prototype.url = "banks";
 
   Banks.prototype.getSum = function() {
-    var bank, sum, _i, _len, _ref;
+    var bank, i, len, ref, sum;
     sum = 0;
-    _ref = this.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bank = _ref[_i];
+    ref = this.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      bank = ref[i];
       sum += Number(bank.get("amount"));
     }
     return sum;
@@ -377,16 +377,16 @@ $(function() {
 require.register("lib/app_helpers", function(exports, require, module) {
 (function() {
   return (function() {
-    var console, dummy, method, methods, _results;
+    var console, dummy, method, methods, results;
     console = window.console = window.console || {};
     method = void 0;
     dummy = function() {};
     methods = 'assert,count,debug,dir,dirxml,error,exception, group,groupCollapsed,groupEnd,info,log,markTimeline, profile,profileEnd,time,timeEnd,trace,warn'.split(',');
-    _results = [];
+    results = [];
     while (method = methods.pop()) {
-      _results.push(console[method] = console[method] || dummy);
+      results.push(console[method] = console[method] || dummy);
     }
-    return _results;
+    return results;
   })();
 })();
 
@@ -436,11 +436,11 @@ Date.prototype.timeString = function() {
 
 require.register("lib/base_view", function(exports, require, module) {
 var BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
-module.exports = BaseView = (function(_super) {
-  __extends(BaseView, _super);
+module.exports = BaseView = (function(superClass) {
+  extend(BaseView, superClass);
 
   function BaseView() {
     return BaseView.__super__.constructor.apply(this, arguments);
@@ -482,18 +482,18 @@ module.exports = BaseView = (function(_super) {
 
 require.register("lib/view_collection", function(exports, require, module) {
 var BaseView, ViewCollection,
-  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('lib/base_view');
 
-module.exports = ViewCollection = (function(_super) {
-  __extends(ViewCollection, _super);
+module.exports = ViewCollection = (function(superClass) {
+  extend(ViewCollection, superClass);
 
   function ViewCollection() {
-    this.removeItem = __bind(this.removeItem, this);
-    this.addItem = __bind(this.addItem, this);
+    this.removeItem = bind(this.removeItem, this);
+    this.addItem = bind(this.addItem, this);
     return ViewCollection.__super__.constructor.apply(this, arguments);
   }
 
@@ -530,21 +530,21 @@ module.exports = ViewCollection = (function(_super) {
   };
 
   ViewCollection.prototype.render = function() {
-    var id, view, _ref;
-    _ref = this.views;
-    for (id in _ref) {
-      view = _ref[id];
+    var id, ref, view;
+    ref = this.views;
+    for (id in ref) {
+      view = ref[id];
       view.$el.detach();
     }
     return ViewCollection.__super__.render.apply(this, arguments);
   };
 
   ViewCollection.prototype.afterRender = function() {
-    var id, view, _ref;
+    var id, ref, view;
     this.$collectionEl = $(this.collectionEl);
-    _ref = this.views;
-    for (id in _ref) {
-      view = _ref[id];
+    ref = this.views;
+    for (id in ref) {
+      view = ref[id];
       this.appendView(view.$el);
     }
     this.onReset(this.collection);
@@ -557,10 +557,10 @@ module.exports = ViewCollection = (function(_super) {
   };
 
   ViewCollection.prototype.onReset = function(newcollection) {
-    var id, view, _ref;
-    _ref = this.views;
-    for (id in _ref) {
-      view = _ref[id];
+    var id, ref, view;
+    ref = this.views;
+    for (id in ref) {
+      view = ref[id];
       view.remove();
     }
     return newcollection.forEach(this.addItem);
@@ -726,7 +726,7 @@ module.exports = {
   "accounts_alerts_delete": "supprimer",
   "alert_sure_delete_bank": "Vous êtes sur le point de supprimer toutes les données lié à cette banque. Cette opération est irréversible. Êtes-vous sûr ?",
   "alert_sure_delete_account": "Vous êtes sur le point de supprimer toutes les données lié à ce compte. Cette opération est irréversible. Êtes-vous sûr ?",
-  "error_loading_accounts": "Une erreur est survenue lors du charzgement de vos comptes bancaires. Veuillez rafraîchir la page ou rééessayer plus tard.",
+  "error_loading_accounts": "Une erreur est survenue lors du chargement de vos comptes bancaires. Veuillez rafraîchir la page ou rééessayer plus tard.",
   "fatal_error": "Une erreur inconnue a eu lieu, veuillez rafraîchir la page.",
   "error_check_credentials_btn": "Echec de la connexion au serveur. Cliquez pour réessayer.",
   "error_check_credentials": "Nous n'avons pas vu nous connecter au serveur de votre banque. Veuillez vérifier que vos identifiants sont corrects et réessayer à nouveau.",
@@ -745,13 +745,13 @@ module.exports = {
 
 require.register("models/bank", function(exports, require, module) {
 var Bank, BankAccountsCollection,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankAccountsCollection = require('../collections/bank_accounts');
 
-module.exports = Bank = (function(_super) {
-  __extends(Bank, _super);
+module.exports = Bank = (function(superClass) {
+  extend(Bank, superClass);
 
   function Bank() {
     return Bank.__super__.constructor.apply(this, arguments);
@@ -784,11 +784,11 @@ module.exports = Bank = (function(_super) {
 
 require.register("models/bank_access", function(exports, require, module) {
 var BankAccess,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
-module.exports = BankAccess = (function(_super) {
-  __extends(BankAccess, _super);
+module.exports = BankAccess = (function(superClass) {
+  extend(BankAccess, superClass);
 
   function BankAccess() {
     return BankAccess.__super__.constructor.apply(this, arguments);
@@ -804,13 +804,13 @@ module.exports = BankAccess = (function(_super) {
 
 require.register("models/bank_account", function(exports, require, module) {
 var BankAccount, BankOperationsCollection,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BankOperationsCollection = require('../collections/bank_operations');
 
-module.exports = BankAccount = (function(_super) {
-  __extends(BankAccount, _super);
+module.exports = BankAccount = (function(superClass) {
+  extend(BankAccount, superClass);
 
   function BankAccount() {
     return BankAccount.__super__.constructor.apply(this, arguments);
@@ -826,11 +826,11 @@ module.exports = BankAccount = (function(_super) {
 
 require.register("models/bank_alert", function(exports, require, module) {
 var BankAlert,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
-module.exports = BankAlert = (function(_super) {
-  __extends(BankAlert, _super);
+module.exports = BankAlert = (function(superClass) {
+  extend(BankAlert, superClass);
 
   function BankAlert() {
     return BankAlert.__super__.constructor.apply(this, arguments);
@@ -846,11 +846,11 @@ module.exports = BankAlert = (function(_super) {
 
 require.register("models/bank_operation", function(exports, require, module) {
 var BankOperation,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
-module.exports = BankOperation = (function(_super) {
-  __extends(BankOperation, _super);
+module.exports = BankOperation = (function(superClass) {
+  extend(BankOperation, superClass);
 
   function BankOperation() {
     return BankOperation.__super__.constructor.apply(this, arguments);
@@ -864,8 +864,8 @@ module.exports = BankOperation = (function(_super) {
 
 require.register("router", function(exports, require, module) {
 var AppView, BalanceView, MockupView, Router,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 MockupView = require('views/mockup');
 
@@ -873,22 +873,22 @@ AppView = require('views/app');
 
 BalanceView = require('views/balance');
 
-module.exports = Router = (function(_super) {
-  __extends(Router, _super);
+module.exports = Router = (function(superClass) {
+  extend(Router, superClass);
 
   function Router() {
     return Router.__super__.constructor.apply(this, arguments);
   }
 
   Router.prototype.empty = function() {
-    var _ref, _ref1, _ref2;
-    if ((_ref = window.views.balanceView) != null) {
-      _ref.empty();
+    var ref, ref1, ref2;
+    if ((ref = window.views.balanceView) != null) {
+      ref.empty();
     }
-    if ((_ref1 = window.views.accountsView) != null) {
-      _ref1.empty();
+    if ((ref1 = window.views.accountsView) != null) {
+      ref1.empty();
     }
-    return (_ref2 = window.views.searchView) != null ? _ref2.empty() : void 0;
+    return (ref2 = window.views.searchView) != null ? ref2.empty() : void 0;
   };
 
   Router.prototype.routes = {
@@ -898,30 +898,30 @@ module.exports = Router = (function(_super) {
   };
 
   Router.prototype.balance = function() {
-    var _ref;
+    var ref;
     this.empty();
-    if ((_ref = window.views.balanceView) != null) {
-      _ref.render();
+    if ((ref = window.views.balanceView) != null) {
+      ref.render();
     }
     $(".menu-position").removeClass("active");
     return $(".menu-1").addClass("active");
   };
 
   Router.prototype.search = function() {
-    var _ref;
+    var ref;
     this.empty();
-    if ((_ref = window.views.searchView) != null) {
-      _ref.render();
+    if ((ref = window.views.searchView) != null) {
+      ref.render();
     }
     $(".menu-position").removeClass("active");
     return $(".menu-2").addClass("active");
   };
 
   Router.prototype.accounts = function() {
-    var _ref;
+    var ref;
     this.empty();
-    if ((_ref = window.views.accountsView) != null) {
-      _ref.render();
+    if ((ref = window.views.accountsView) != null) {
+      ref.render();
     }
     $(".menu-position").removeClass("active");
     return $(".menu-3").addClass("active");
@@ -935,15 +935,15 @@ module.exports = Router = (function(_super) {
 
 require.register("views/accounts", function(exports, require, module) {
 var AccountsBankView, AccountsView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
 AccountsBankView = require('./accounts_bank');
 
-module.exports = AccountsView = (function(_super) {
-  __extends(AccountsView, _super);
+module.exports = AccountsView = (function(superClass) {
+  extend(AccountsView, superClass);
 
   function AccountsView() {
     return AccountsView.__super__.constructor.apply(this, arguments);
@@ -958,11 +958,11 @@ module.exports = AccountsView = (function(_super) {
   AccountsView.prototype.subViews = [];
 
   AccountsView.prototype.render = function() {
-    var bank, view, _i, _len, _ref;
+    var bank, i, len, ref, view;
     AccountsView.__super__.render.call(this);
-    _ref = window.collections.banks.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bank = _ref[_i];
+    ref = window.collections.banks.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      bank = ref[i];
       view = new AccountsBankView(bank);
       this.subViews.push(view);
       this.$(this.elBanks).append(view.render().el);
@@ -971,14 +971,14 @@ module.exports = AccountsView = (function(_super) {
   };
 
   AccountsView.prototype.empty = function() {
-    var view, _i, _len, _ref, _results;
-    _ref = this.subViews;
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      view = _ref[_i];
-      _results.push(view.destroy());
+    var i, len, ref, results, view;
+    ref = this.subViews;
+    results = [];
+    for (i = 0, len = ref.length; i < len; i++) {
+      view = ref[i];
+      results.push(view.destroy());
     }
-    return _results;
+    return results;
   };
 
   return AccountsView;
@@ -989,9 +989,9 @@ module.exports = AccountsView = (function(_super) {
 
 require.register("views/accounts_alerts", function(exports, require, module) {
 var AccountsAlertsAlertView, AccountsAlertsView, BankAlert, BankAlertsCollection, BaseView,
-  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1001,8 +1001,8 @@ AccountsAlertsAlertView = require('./accounts_alerts_alert');
 
 BankAlert = require('../models/bank_alert');
 
-module.exports = AccountsAlertsView = (function(_super) {
-  __extends(AccountsAlertsView, _super);
+module.exports = AccountsAlertsView = (function(superClass) {
+  extend(AccountsAlertsView, superClass);
 
   AccountsAlertsView.prototype.template = require("./templates/accounts_alerts");
 
@@ -1024,7 +1024,7 @@ module.exports = AccountsAlertsView = (function(_super) {
 
   function AccountsAlertsView(account) {
     this.account = account;
-    this.appendSubView = __bind(this.appendSubView, this);
+    this.appendSubView = bind(this.appendSubView, this);
     this.alerts.url = "bankalerts/getForBankAccount/" + this.account.get("id");
     AccountsAlertsView.__super__.constructor.call(this);
   }
@@ -1057,10 +1057,10 @@ module.exports = AccountsAlertsView = (function(_super) {
   };
 
   AccountsAlertsView.prototype.appendSubView = function(viewAlert) {
-    var element, _ref, _ref1;
-    if ((viewAlert != null ? (_ref = viewAlert.alert) != null ? _ref.get("type") : void 0 : void 0) === "report") {
+    var element, ref, ref1;
+    if ((viewAlert != null ? (ref = viewAlert.alert) != null ? ref.get("type") : void 0 : void 0) === "report") {
       element = this.elPeriodic;
-    } else if ((viewAlert != null ? (_ref1 = viewAlert.alert) != null ? _ref1.get("type") : void 0 : void 0) === "balance") {
+    } else if ((viewAlert != null ? (ref1 = viewAlert.alert) != null ? ref1.get("type") : void 0 : void 0) === "balance") {
       element = this.elAmount;
     } else {
       element = this.elTransaction;
@@ -1077,15 +1077,15 @@ module.exports = AccountsAlertsView = (function(_super) {
     this.$("#reports-dialog").modal("show");
     this.alerts.fetch({
       success: function(alerts) {
-        var alert, viewAlert, _i, _len, _ref, _results;
-        _ref = alerts.models;
-        _results = [];
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          alert = _ref[_i];
+        var alert, i, len, ref, results, viewAlert;
+        ref = alerts.models;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          alert = ref[i];
           viewAlert = new AccountsAlertsAlertView(alert, view);
-          _results.push(view.appendSubView(viewAlert));
+          results.push(view.appendSubView(viewAlert));
         }
-        return _results;
+        return results;
       },
       error: function(err) {}
     });
@@ -1093,10 +1093,10 @@ module.exports = AccountsAlertsView = (function(_super) {
   };
 
   AccountsAlertsView.prototype.destroy = function() {
-    var view, _i, _len, _ref;
-    _ref = this.subViews;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      view = _ref[_i];
+    var i, len, ref, view;
+    ref = this.subViews;
+    for (i = 0, len = ref.length; i < len; i++) {
+      view = ref[i];
       view.destroy();
     }
     return AccountsAlertsView.__super__.destroy.call(this);
@@ -1110,15 +1110,15 @@ module.exports = AccountsAlertsView = (function(_super) {
 
 require.register("views/accounts_alerts_alert", function(exports, require, module) {
 var AccountsAlertsAlertView, BankAlert, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
 BankAlert = require('../models/bank_alert');
 
-module.exports = AccountsAlertsAlertView = (function(_super) {
-  __extends(AccountsAlertsAlertView, _super);
+module.exports = AccountsAlertsAlertView = (function(superClass) {
+  extend(AccountsAlertsAlertView, superClass);
 
   AccountsAlertsAlertView.prototype.template = require("./templates/accounts_alerts_alert");
 
@@ -1189,8 +1189,8 @@ module.exports = AccountsAlertsAlertView = (function(_super) {
 
 require.register("views/accounts_bank", function(exports, require, module) {
 var AccountsBankAccountView, AccountsBankView, BankAccountsCollection, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1198,8 +1198,8 @@ BankAccountsCollection = require('../collections/bank_accounts');
 
 AccountsBankAccountView = require('./accounts_bank_account');
 
-module.exports = AccountsBankView = (function(_super) {
-  __extends(AccountsBankView, _super);
+module.exports = AccountsBankView = (function(superClass) {
+  extend(AccountsBankView, superClass);
 
   AccountsBankView.prototype.template = require('./templates/accounts_bank');
 
@@ -1215,8 +1215,8 @@ module.exports = AccountsBankView = (function(_super) {
 
   AccountsBankView.prototype.subViews = [];
 
-  function AccountsBankView(bank) {
-    this.bank = bank;
+  function AccountsBankView(bank1) {
+    this.bank = bank1;
     AccountsBankView.__super__.constructor.call(this);
   }
 
@@ -1276,15 +1276,15 @@ module.exports = AccountsBankView = (function(_super) {
     bank = this.bank;
     this.bank.accounts.fetch({
       success: function(accounts) {
-        var account, accountView, _i, _len, _ref;
+        var account, accountView, i, len, ref;
         bank.set("amount", bank.accounts.getSum());
         if (accounts.length > 0) {
           view.$el.html(view.template({
             model: view.bank
           }));
-          _ref = accounts.models;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            account = _ref[_i];
+          ref = accounts.models;
+          for (i = 0, len = ref.length; i < len; i++) {
+            account = ref[i];
             accountView = new AccountsBankAccountView(account, view);
             view.subViews.push(accountView);
             view.$("tbody#account-container").append(accountView.render().el);
@@ -1301,10 +1301,10 @@ module.exports = AccountsBankView = (function(_super) {
   };
 
   AccountsBankView.prototype.destroy = function() {
-    var view, _i, _len, _ref;
-    _ref = this.subViews;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      view = _ref[_i];
+    var i, len, ref, view;
+    ref = this.subViews;
+    for (i = 0, len = ref.length; i < len; i++) {
+      view = ref[i];
       view.destroy();
     }
     return AccountsBankView.__super__.destroy.call(this);
@@ -1318,15 +1318,15 @@ module.exports = AccountsBankView = (function(_super) {
 
 require.register("views/accounts_bank_account", function(exports, require, module) {
 var AccountsAlertsView, AccountsBankAccountView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
 AccountsAlertsView = require('./accounts_alerts');
 
-module.exports = AccountsBankAccountView = (function(_super) {
-  __extends(AccountsBankAccountView, _super);
+module.exports = AccountsBankAccountView = (function(superClass) {
+  extend(AccountsBankAccountView, superClass);
 
   AccountsBankAccountView.prototype.template = require('./templates/accounts_bank_account');
 
@@ -1339,17 +1339,17 @@ module.exports = AccountsBankAccountView = (function(_super) {
     "click a.alert-management": "showAlertManagement"
   };
 
-  function AccountsBankAccountView(model, parent) {
-    this.model = model;
-    this.parent = parent;
+  function AccountsBankAccountView(model1, parent1) {
+    this.model = model1;
+    this.parent = parent1;
     AccountsBankAccountView.__super__.constructor.call(this);
   }
 
   AccountsBankAccountView.prototype.showAlertManagement = function(event) {
-    var _ref;
+    var ref;
     console.log("showAlertManagement");
-    if ((_ref = this.alertsView) != null) {
-      _ref.destroy();
+    if ((ref = this.alertsView) != null) {
+      ref.destroy();
     }
     this.alertsView = new AccountsAlertsView(this.model);
     return $("body").prepend(this.alertsView.render().el);
@@ -1411,9 +1411,9 @@ module.exports = AccountsBankAccountView = (function(_super) {
   };
 
   AccountsBankAccountView.prototype.destroy = function() {
-    var _ref;
-    if ((_ref = this.alertsView) != null) {
-      _ref.destroy();
+    var ref;
+    if ((ref = this.alertsView) != null) {
+      ref.destroy();
     }
     return AccountsBankAccountView.__super__.destroy.call(this);
   };
@@ -1426,8 +1426,8 @@ module.exports = AccountsBankAccountView = (function(_super) {
 
 require.register("views/app", function(exports, require, module) {
 var AccountsView, AppView, BalanceView, BaseView, NavbarView, NewBankView, SearchView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1441,8 +1441,8 @@ BalanceView = require('views/balance');
 
 SearchView = require('views/search');
 
-module.exports = AppView = (function(_super) {
-  __extends(AppView, _super);
+module.exports = AppView = (function(superClass) {
+  extend(AppView, superClass);
 
   function AppView() {
     return AppView.__super__.constructor.apply(this, arguments);
@@ -1496,8 +1496,8 @@ module.exports = AppView = (function(_super) {
 
 require.register("views/balance", function(exports, require, module) {
 var BalanceBankView, BalanceOperationsView, BalanceView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1505,8 +1505,8 @@ BalanceBankView = require('./balance_bank');
 
 BalanceOperationsView = require("./balance_operations");
 
-module.exports = BalanceView = (function(_super) {
-  __extends(BalanceView, _super);
+module.exports = BalanceView = (function(superClass) {
+  extend(BalanceView, superClass);
 
   function BalanceView() {
     return BalanceView.__super__.constructor.apply(this, arguments);
@@ -1529,12 +1529,12 @@ module.exports = BalanceView = (function(_super) {
   };
 
   BalanceView.prototype.noMoreEmpty = function() {
-    var _ref, _ref1;
-    if ((_ref = this.$(".arrow")) != null) {
-      _ref.hide();
+    var ref, ref1;
+    if ((ref = this.$(".arrow")) != null) {
+      ref.hide();
     }
-    if ((_ref1 = this.$(".loading")) != null) {
-      _ref1.hide();
+    if ((ref1 = this.$(".loading")) != null) {
+      ref1.hide();
     }
     return window.collections.banks.fetch({
       success: (function(_this) {
@@ -1585,17 +1585,17 @@ module.exports = BalanceView = (function(_super) {
   };
 
   BalanceView.prototype.empty = function() {
-    var view, _i, _len, _ref, _ref1, _results;
-    if ((_ref = this.operationsView) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, results1, view;
+    if ((ref = this.operationsView) != null) {
+      ref.destroy();
     }
-    _ref1 = this.subViews;
-    _results = [];
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      view = _ref1[_i];
-      _results.push(view.destroy());
+    ref1 = this.subViews;
+    results1 = [];
+    for (i = 0, len = ref1.length; i < len; i++) {
+      view = ref1[i];
+      results1.push(view.destroy());
     }
-    return _results;
+    return results1;
   };
 
   return BalanceView;
@@ -1606,8 +1606,8 @@ module.exports = BalanceView = (function(_super) {
 
 require.register("views/balance_bank", function(exports, require, module) {
 var BalanceBankView, BankSubTitleView, BankTitleView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1615,8 +1615,8 @@ BankTitleView = require('./bank_title');
 
 BankSubTitleView = require('./bank_subtitle');
 
-module.exports = BalanceBankView = (function(_super) {
-  __extends(BalanceBankView, _super);
+module.exports = BalanceBankView = (function(superClass) {
+  extend(BalanceBankView, superClass);
 
   BalanceBankView.prototype.className = 'bank';
 
@@ -1643,27 +1643,27 @@ module.exports = BalanceBankView = (function(_super) {
   };
 
   BalanceBankView.prototype.render = function() {
-    var account, _i, _len, _ref;
+    var account, i, len, ref;
     this.viewTitle = new BankTitleView(this.bank);
     this.$el.html(this.viewTitle.render().el);
     this.viewTitle = null;
     this.sum = 0;
-    _ref = this.bank.accounts.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      account = _ref[_i];
+    ref = this.bank.accounts.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      account = ref[i];
       this.addOne(account);
     }
     return this;
   };
 
   BalanceBankView.prototype.destroy = function() {
-    var view, _i, _len, _ref, _ref1;
-    if ((_ref = this.viewTitle) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, view;
+    if ((ref = this.viewTitle) != null) {
+      ref.destroy();
     }
-    _ref1 = this.subViews;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      view = _ref1[_i];
+    ref1 = this.subViews;
+    for (i = 0, len = ref1.length; i < len; i++) {
+      view = ref1[i];
       view.destroy();
     }
     return BalanceBankView.__super__.destroy.call(this);
@@ -1677,13 +1677,13 @@ module.exports = BalanceBankView = (function(_super) {
 
 require.register("views/balance_operation", function(exports, require, module) {
 var BalanceOperationView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = BalanceOperationView = (function(_super) {
-  __extends(BalanceOperationView, _super);
+module.exports = BalanceOperationView = (function(superClass) {
+  extend(BalanceOperationView, superClass);
 
   BalanceOperationView.prototype.template = require('./templates/balance_operations_element');
 
@@ -1710,7 +1710,7 @@ module.exports = BalanceOperationView = (function(_super) {
     } else if (this.model.get('title') === "SFR Facture") {
       return 'pdf/factureSFR.pdf';
     } else if (this.model.get('title') === "EDF Facture") {
-      return 'pdf/factureSFR.pdf';
+      return '/#app/edf/4-facture';
     } else {
       return null;
     }
@@ -1725,8 +1725,8 @@ module.exports = BalanceOperationView = (function(_super) {
       this.model.formattedAmount = formattedAmount;
     }
     if (this.showAccountNum) {
-      hint = ("" + (this.model.account.get('title')) + ", ") + ("n°" + (this.model.account.get('accountNumber')));
-      this.model.hint = ("" + (this.model.account.get('title')) + ", ") + ("n°" + (this.model.account.get('accountNumber')));
+      hint = ((this.model.account.get('title')) + ", ") + ("n°" + (this.model.account.get('accountNumber')));
+      this.model.hint = ((this.model.account.get('title')) + ", ") + ("n°" + (this.model.account.get('accountNumber')));
     } else {
       this.model.hint = "" + (this.model.get('raw'));
     }
@@ -1759,8 +1759,8 @@ module.exports = BalanceOperationView = (function(_super) {
 
 require.register("views/balance_operations", function(exports, require, module) {
 var BalanceOperationView, BalanceOperationsView, BankOperationsCollection, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -1768,8 +1768,8 @@ BankOperationsCollection = require("../collections/bank_operations");
 
 BalanceOperationView = require("./balance_operation");
 
-module.exports = BalanceOperationsView = (function(_super) {
-  __extends(BalanceOperationsView, _super);
+module.exports = BalanceOperationsView = (function(superClass) {
+  extend(BalanceOperationsView, superClass);
 
   BalanceOperationsView.prototype.templateHeader = require('./templates/balance_operations_header');
 
@@ -1838,11 +1838,11 @@ module.exports = BalanceOperationsView = (function(_super) {
         url: url = "bankaccounts/retrieveOperations/" + this.model.get("id"),
         type: "GET",
         success: function() {
-          var _ref, _ref1, _ref2;
-          if ((_ref = view.model) != null) {
-            _ref.url = "bankaccounts/" + ((_ref1 = view.model) != null ? _ref1.get("id") : void 0);
+          var ref, ref1, ref2;
+          if ((ref = view.model) != null) {
+            ref.url = "bankaccounts/" + ((ref1 = view.model) != null ? ref1.get("id") : void 0);
           }
-          return (_ref2 = view.model) != null ? _ref2.fetch({
+          return (ref2 = view.model) != null ? ref2.fetch({
             success: function() {
               console.log("... checked");
               button.html("checked");
@@ -1870,7 +1870,7 @@ module.exports = BalanceOperationsView = (function(_super) {
     var model;
     if (this.model != null) {
       model = this.model;
-      return this.$("span.last-checked").html("" + (window.i18n("balance_last_checked")) + " " + (moment(moment(model.get("lastChecked"))).fromNow()) + ". ");
+      return this.$("span.last-checked").html((window.i18n("balance_last_checked")) + " " + (moment(moment(model.get("lastChecked"))).fromNow()) + ". ");
     }
   };
 
@@ -1902,18 +1902,18 @@ module.exports = BalanceOperationsView = (function(_super) {
   };
 
   BalanceOperationsView.prototype.addAll = function() {
-    var operation, subView, view, _i, _j, _len, _len1, _ref, _ref1;
+    var i, j, len, len1, operation, ref, ref1, subView, view;
     this.$("#table-operations").html("");
     this.$(".loading").remove();
-    _ref = this.subViews;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      view = _ref[_i];
+    ref = this.subViews;
+    for (i = 0, len = ref.length; i < len; i++) {
+      view = ref[i];
       view.destroy();
     }
     this.subViews = [];
-    _ref1 = window.collections.operations.models;
-    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-      operation = _ref1[_j];
+    ref1 = window.collections.operations.models;
+    for (j = 0, len1 = ref1.length; j < len1; j++) {
+      operation = ref1[j];
       subView = new BalanceOperationView(operation, this.model);
       this.$("#table-operations").append(subView.render().el);
       this.subViews.push(subView);
@@ -1923,13 +1923,13 @@ module.exports = BalanceOperationsView = (function(_super) {
   };
 
   BalanceOperationsView.prototype.destroy = function() {
-    var view, _i, _len, _ref, _ref1;
-    if ((_ref = this.viewTitle) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, view;
+    if ((ref = this.viewTitle) != null) {
+      ref.destroy();
     }
-    _ref1 = this.subViews;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      view = _ref1[_i];
+    ref1 = this.subViews;
+    for (i = 0, len = ref1.length; i < len; i++) {
+      view = ref1[i];
       view.destroy();
     }
     return BalanceOperationsView.__super__.destroy.call(this);
@@ -1943,13 +1943,13 @@ module.exports = BalanceOperationsView = (function(_super) {
 
 require.register("views/bank_subtitle", function(exports, require, module) {
 var BankSubTitleView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = BankSubTitleView = (function(_super) {
-  __extends(BankSubTitleView, _super);
+module.exports = BankSubTitleView = (function(superClass) {
+  extend(BankSubTitleView, superClass);
 
   BankSubTitleView.prototype.template = require('./templates/balance_bank_subtitle');
 
@@ -1987,13 +1987,13 @@ module.exports = BankSubTitleView = (function(_super) {
 
 require.register("views/bank_title", function(exports, require, module) {
 var BankTitleView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = BankTitleView = (function(_super) {
-  __extends(BankTitleView, _super);
+module.exports = BankTitleView = (function(superClass) {
+  extend(BankTitleView, superClass);
 
   BankTitleView.prototype.template = require('./templates/balance_bank_title');
 
@@ -2045,13 +2045,13 @@ module.exports = BankTitleView = (function(_super) {
 
 require.register("views/mockup", function(exports, require, module) {
 var AppView, BaseView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = AppView = (function(_super) {
-  __extends(AppView, _super);
+module.exports = AppView = (function(superClass) {
+  extend(AppView, superClass);
 
   function AppView() {
     return AppView.__super__.constructor.apply(this, arguments);
@@ -2073,13 +2073,13 @@ module.exports = AppView = (function(_super) {
 
 require.register("views/navbar", function(exports, require, module) {
 var BaseView, NavbarView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = NavbarView = (function(_super) {
-  __extends(NavbarView, _super);
+module.exports = NavbarView = (function(superClass) {
+  extend(NavbarView, superClass);
 
   function NavbarView() {
     return NavbarView.__super__.constructor.apply(this, arguments);
@@ -2111,15 +2111,15 @@ module.exports = NavbarView = (function(_super) {
 
 require.register("views/new_bank", function(exports, require, module) {
 var BankAccessModel, BaseView, NewBankView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
 BankAccessModel = require('../models/bank_access');
 
-module.exports = NewBankView = (function(_super) {
-  __extends(NewBankView, _super);
+module.exports = NewBankView = (function(superClass) {
+  extend(NewBankView, superClass);
 
   function NewBankView() {
     return NewBankView.__super__.constructor.apply(this, arguments);
@@ -2211,8 +2211,8 @@ module.exports = NewBankView = (function(_super) {
 
 require.register("views/search", function(exports, require, module) {
 var BaseView, SearchBankView, SearchOperationsView, SearchView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -2220,8 +2220,8 @@ SearchBankView = require('./search_bank');
 
 SearchOperationsView = require("./search_operations");
 
-module.exports = SearchView = (function(_super) {
-  __extends(SearchView, _super);
+module.exports = SearchView = (function(superClass) {
+  extend(SearchView, superClass);
 
   function SearchView() {
     return SearchView.__super__.constructor.apply(this, arguments);
@@ -2244,12 +2244,12 @@ module.exports = SearchView = (function(_super) {
   };
 
   SearchView.prototype.noMoreEmpty = function() {
-    var _ref, _ref1;
+    var ref, ref1;
     console.log("no more empty");
-    if ((_ref = this.$(".arrow")) != null) {
-      _ref.hide();
+    if ((ref = this.$(".arrow")) != null) {
+      ref.hide();
     }
-    return (_ref1 = this.$(".loading")) != null ? _ref1.hide() : void 0;
+    return (ref1 = this.$(".loading")) != null ? ref1.hide() : void 0;
   };
 
   SearchView.prototype.render = function() {
@@ -2290,17 +2290,17 @@ module.exports = SearchView = (function(_super) {
   };
 
   SearchView.prototype.empty = function() {
-    var viewBank, _i, _len, _ref, _ref1, _results;
-    if ((_ref = this.operations) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, results1, viewBank;
+    if ((ref = this.operations) != null) {
+      ref.destroy();
     }
-    _ref1 = this.viewsBank;
-    _results = [];
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      viewBank = _ref1[_i];
-      _results.push(viewBank.destroy());
+    ref1 = this.viewsBank;
+    results1 = [];
+    for (i = 0, len = ref1.length; i < len; i++) {
+      viewBank = ref1[i];
+      results1.push(viewBank.destroy());
     }
-    return _results;
+    return results1;
   };
 
   return SearchView;
@@ -2311,8 +2311,8 @@ module.exports = SearchView = (function(_super) {
 
 require.register("views/search_bank", function(exports, require, module) {
 var BaseView, SearchBankSubTitleView, SearchBankTitleView, SearchBankView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -2320,8 +2320,8 @@ SearchBankTitleView = require('./search_bank_title');
 
 SearchBankSubTitleView = require('./search_bank_subtitle');
 
-module.exports = SearchBankView = (function(_super) {
-  __extends(SearchBankView, _super);
+module.exports = SearchBankView = (function(superClass) {
+  extend(SearchBankView, superClass);
 
   SearchBankView.prototype.className = 'bank';
 
@@ -2342,15 +2342,15 @@ module.exports = SearchBankView = (function(_super) {
   };
 
   SearchBankView.prototype.bankChange = function(event) {
-    var account, enabled, _i, _len, _ref;
+    var account, enabled, i, len, ref;
     enabled = this.$(event.target).prop("checked");
     console.log("[Search] " + this.bank.get("name") + ": " + enabled);
     $.each(this.$("input[type=checkbox].choice-account"), function(index, element) {
       return $(element).prop("checked", enabled);
     });
-    _ref = this.bank.accounts.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      account = _ref[_i];
+    ref = this.bank.accounts.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      account = ref[i];
       account.checked = enabled;
     }
     this.bank.checked = enabled;
@@ -2366,27 +2366,27 @@ module.exports = SearchBankView = (function(_super) {
   };
 
   SearchBankView.prototype.render = function() {
-    var account, _i, _len, _ref;
+    var account, i, len, ref;
     this.viewTitle = new SearchBankTitleView(this.bank);
     this.$el.html(this.viewTitle.render().el);
     this.viewTitle = null;
     this.sum = 0;
-    _ref = this.bank.accounts.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      account = _ref[_i];
+    ref = this.bank.accounts.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      account = ref[i];
       this.addOne(account);
     }
     return this;
   };
 
   SearchBankView.prototype.destroy = function() {
-    var viewAccount, _i, _len, _ref, _ref1;
-    if ((_ref = this.viewTitle) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, viewAccount;
+    if ((ref = this.viewTitle) != null) {
+      ref.destroy();
     }
-    _ref1 = this.viewsAccount;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      viewAccount = _ref1[_i];
+    ref1 = this.viewsAccount;
+    for (i = 0, len = ref1.length; i < len; i++) {
+      viewAccount = ref1[i];
       viewAccount.destroy();
     }
     return SearchBankView.__super__.destroy.call(this);
@@ -2400,13 +2400,13 @@ module.exports = SearchBankView = (function(_super) {
 
 require.register("views/search_bank_subtitle", function(exports, require, module) {
 var BaseView, SearchBankSubTitleView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = SearchBankSubTitleView = (function(_super) {
-  __extends(SearchBankSubTitleView, _super);
+module.exports = SearchBankSubTitleView = (function(superClass) {
+  extend(SearchBankSubTitleView, superClass);
 
   SearchBankSubTitleView.prototype.template = require('./templates/search_bank_subtitle');
 
@@ -2439,13 +2439,13 @@ module.exports = SearchBankSubTitleView = (function(_super) {
 
 require.register("views/search_bank_title", function(exports, require, module) {
 var BaseView, SearchBankTitleView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
-module.exports = SearchBankTitleView = (function(_super) {
-  __extends(SearchBankTitleView, _super);
+module.exports = SearchBankTitleView = (function(superClass) {
+  extend(SearchBankTitleView, superClass);
 
   SearchBankTitleView.prototype.template = require('./templates/search_bank_title');
 
@@ -2494,8 +2494,8 @@ module.exports = SearchBankTitleView = (function(_super) {
 
 require.register("views/search_operations", function(exports, require, module) {
 var BankOperationsCollection, BaseView, SearchOperationsTableView, SearchOperationsView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -2503,8 +2503,8 @@ BankOperationsCollection = require("../collections/bank_operations");
 
 SearchOperationsTableView = require("./search_operations_table");
 
-module.exports = SearchOperationsView = (function(_super) {
-  __extends(SearchOperationsView, _super);
+module.exports = SearchOperationsView = (function(superClass) {
+  extend(SearchOperationsView, superClass);
 
   SearchOperationsView.prototype.data = {};
 
@@ -2574,14 +2574,14 @@ module.exports = SearchOperationsView = (function(_super) {
   };
 
   SearchOperationsView.prototype.updateAccounts = function() {
-    var account, accounts, bank, _i, _j, _len, _len1, _ref, _ref1;
+    var account, accounts, bank, i, j, len, len1, ref, ref1;
     accounts = [];
-    _ref = window.collections.banks.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bank = _ref[_i];
-      _ref1 = bank.accounts.models;
-      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-        account = _ref1[_j];
+    ref = window.collections.banks.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      bank = ref[i];
+      ref1 = bank.accounts.models;
+      for (j = 0, len1 = ref1.length; j < len1; j++) {
+        account = ref1[j];
         if (bank.checked && account.checked) {
           accounts.push(account.get("accountNumber"));
         }
@@ -2633,9 +2633,9 @@ module.exports = SearchOperationsView = (function(_super) {
   };
 
   SearchOperationsView.prototype.destroy = function() {
-    var _ref;
-    if ((_ref = this.operationsTableView) != null) {
-      _ref.destroy();
+    var ref;
+    if ((ref = this.operationsTableView) != null) {
+      ref.destroy();
     }
     return SearchOperationsView.__super__.destroy.call(this);
   };
@@ -2648,8 +2648,8 @@ module.exports = SearchOperationsView = (function(_super) {
 
 require.register("views/search_operations_table", function(exports, require, module) {
 var BalanceOperationView, BankOperationsCollection, BaseView, SearchOperationsTableView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 BaseView = require('../lib/base_view');
 
@@ -2657,8 +2657,8 @@ BankOperationsCollection = require("../collections/bank_operations");
 
 BalanceOperationView = require("./balance_operation");
 
-module.exports = SearchOperationsTableView = (function(_super) {
-  __extends(SearchOperationsTableView, _super);
+module.exports = SearchOperationsTableView = (function(superClass) {
+  extend(SearchOperationsTableView, superClass);
 
   SearchOperationsTableView.prototype.templateHeader = require('./templates/search_operations_table_header');
 
@@ -2711,22 +2711,22 @@ module.exports = SearchOperationsTableView = (function(_super) {
   };
 
   SearchOperationsTableView.prototype.reload = function() {
-    var account, accountNum, accounts, bank, operation, subView, view, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+    var account, accountNum, accounts, bank, i, j, k, len, len1, len2, operation, ref, ref1, ref2, subView, view;
     view = this;
     view.$("#search-operations-table-body").html("");
     accounts = [];
-    _ref = window.collections.banks.models;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bank = _ref[_i];
-      _ref1 = bank.accounts.models;
-      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-        account = _ref1[_j];
+    ref = window.collections.banks.models;
+    for (i = 0, len = ref.length; i < len; i++) {
+      bank = ref[i];
+      ref1 = bank.accounts.models;
+      for (j = 0, len1 = ref1.length; j < len1; j++) {
+        account = ref1[j];
         accounts[account.get("accountNumber")] = account;
       }
     }
-    _ref2 = window.collections.operations.models;
-    for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-      operation = _ref2[_k];
+    ref2 = window.collections.operations.models;
+    for (k = 0, len2 = ref2.length; k < len2; k++) {
+      operation = ref2[k];
       accountNum = operation.get("bankAccount");
       subView = new BalanceOperationView(operation, accounts[accountNum], true);
       view.$("#search-operations-table-body").append(subView.render().el);
@@ -2738,13 +2738,13 @@ module.exports = SearchOperationsTableView = (function(_super) {
   };
 
   SearchOperationsTableView.prototype.destroy = function() {
-    var view, _i, _len, _ref, _ref1;
-    if ((_ref = this.viewTitle) != null) {
-      _ref.destroy();
+    var i, len, ref, ref1, view;
+    if ((ref = this.viewTitle) != null) {
+      ref.destroy();
     }
-    _ref1 = this.subViews;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      view = _ref1[_i];
+    ref1 = this.subViews;
+    for (i = 0, len = ref1.length; i < len; i++) {
+      view = ref1[i];
       view.destroy();
     }
     return SearchOperationsTableView.__super__.destroy.call(this);

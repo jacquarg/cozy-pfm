@@ -96,7 +96,7 @@ module.exports =
     #
     "alert_sure_delete_bank" : "Vous êtes sur le point de supprimer toutes les données lié à cette banque. Cette opération est irréversible. Êtes-vous sûr ?"
     "alert_sure_delete_account" : "Vous êtes sur le point de supprimer toutes les données lié à ce compte. Cette opération est irréversible. Êtes-vous sûr ?"
-    "error_loading_accounts" : "Une erreur est survenue lors du charzgement de vos comptes bancaires. Veuillez rafraîchir la page ou rééessayer plus tard."
+    "error_loading_accounts" : "Une erreur est survenue lors du chargement de vos comptes bancaires. Veuillez rafraîchir la page ou rééessayer plus tard."
     "fatal_error" : "Une erreur inconnue a eu lieu, veuillez rafraîchir la page."
     "error_check_credentials_btn" : "Echec de la connexion au serveur. Cliquez pour réessayer."
     "error_check_credentials" : "Nous n'avons pas vu nous connecter au serveur de votre banque. Veuillez vérifier que vos identifiants sont corrects et réessayer à nouveau."
