@@ -23,7 +23,7 @@ module.exports = class BalanceOperationView extends BaseView
         else if @model.get('title') is "SFR Facture"
             return 'pdf/factureSFR.pdf'
         else if @model.get('title') is "EDF Facture"
-            return '/#app/edf/4-facture'
+            return '/#apps/edf/4-facture'
         else return null
 
     render: ->

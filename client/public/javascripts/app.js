@@ -1710,7 +1710,7 @@ module.exports = BalanceOperationView = (function(superClass) {
     } else if (this.model.get('title') === "SFR Facture") {
       return 'pdf/factureSFR.pdf';
     } else if (this.model.get('title') === "EDF Facture") {
-      return '/#app/edf/4-facture';
+      return '/#apps/edf/4-facture';
     } else {
       return null;
     }
